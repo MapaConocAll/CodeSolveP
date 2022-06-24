@@ -11,45 +11,70 @@
         <!-- Styles -->
 
 <style>
+    * {margin:0;padding:0;border:0 none;position: relative; outline: none;
+    }
+
+    a:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        background: #3eeded;
+        visibility: hidden;
+        border-radius: 5px;
+        transform: scaleX(0);
+        transition: .25s linear;
+    }
+
+    a:hover:before,
+    a:focus:before {
+        visibility: visible;
+        transform: scaleX(1);
+    }
 .card{
     z-index: 900;
 }
 </style>
     </head>
-    <body class="align-items-center bg-emerald-300 ">
+    <body>
 
-    <div class="container-fluid align-items-center justify-content-center">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown link
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+    <div class="container-fluid" style="width: 100%;">
+        <div style="padding-bottom: 10px">
+            <nav class="navbar navbar-expand-lg" style="padding:0;">
+                <div class="container-fluid ">
+                    <a class="navbar-brand" href="#">Gustavo M.O</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pricing</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown link
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
+
         <div class="row gx-2">
 
             <div class="col-lg-3 col-md-6">
@@ -57,7 +82,7 @@
                 <div class="card" style="width: 18rem;" id="card1">
                     <img src="{{asset('img/futuristic-hud.svg')}}" class="card-img-top rounded">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">Portafolio</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
@@ -69,7 +94,7 @@
                 <div class="card" style="width: 18rem;" id="card2">
                     <img src="{{asset('img/volcano.svg')}}" class="card-img-top rounded">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">Habilidades</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
@@ -81,7 +106,7 @@
                 <div class="card" style="width: 18rem;" id="card3">
                     <img src="{{asset('img/app-development.svg')}}" class="card-img-top rounded">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">Conocimientos</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
@@ -94,7 +119,7 @@
                 <div class="card" style="width: 18rem;" id="card4">
                     <img src="{{asset('img/teaching-and-learning-in-school.svg')}}" class="card-img-top rounded">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">Yo y la sociedad</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
@@ -103,7 +128,7 @@
             </div>
 
         </div>
-        <div class="d-flex flex-column justify-content-between fixed-bottom ">
+        <div class="d-flex flex-column justify-content-between fixed-bottom " style="z-index: 100;">
             <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#49E0EC" fill-opacity="1" d="M0,192L48,192C96,192,192,192,288,202.7C384,213,480,235,576,250.7C672,267,768,277,864,266.7C960,256,1056,224,1152,218.7C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
         </div>
 
